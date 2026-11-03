@@ -1,0 +1,6 @@
+# Acrescente ao application.properties do backend.
+# Sem isso o Spring Boot omite a mensagem das ResponseStatusException
+# (ex.: "Já existe um aluno com esse e-mail") e o frontend só consegue mostrar
+# um texto genérico para 400/404/409.
+server.error.include-message=always
+server.error.include-binding-errors=always
